@@ -31,8 +31,8 @@ jobs:
           dvc repro
 
           echo '## CML Report' > report.md
-          (dvc metrics diff --show-md master) || echo '' >> report.md
-          (dvc plots diff --target loss.csv --show-vega master > vega.json && vl2png vega.json | cml-publish --md) || echo '' >> report.md
+          dvc metrics diff --show-md master >> report.md
+          dvc plots diff --target loss.csv --show-vega master > vega.json && vl2png vega.json | cml-publish --md >> report.md
           cml-pr --md 'dvc.lock' '.gitignore' loss.csv metrics.json >> report.md
           cml-send-comment report.md  
           
