@@ -4,12 +4,12 @@ stages:
     cmd: python train.py
     deps:
     - path: train.py
-      md5: 0775ae7b4d95708f3933886994c00446
+      md5: d43f00e35df816f3bd1840ed03c430af
       size: 893
     outs:
     - path: loss.csv
-      md5: 1eb915b980cdbd4a952651a5f5607201
-      size: 204
+      md5: f0ab3a5c4c2284b3287d1ab05cba3969
+      size: 243
     - path: metrics.json
-      md5: f12f536986d0ea7f1acf1ef93e6f4fba
+      md5: b04d0ca7ba9945e89e41853be130d557
       size: 84
